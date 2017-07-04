@@ -30,7 +30,7 @@ public class Game {
 
     }
 
-    private int compareMoves(Moves playerMove, Moves computerMove){
+    public int compareMoves(Moves playerMove, Moves computerMove){
         if (playerMove == computerMove){
             return 0;
         }
@@ -48,17 +48,18 @@ public class Game {
         }
     }
 
-    private void displayWinner(int result){
+    public String displayWinner(int result){
         switch (result){
             case 0:
-                System.out.println("It's a draw");
-                break;
+                return "It's a draw";
             case 1 :
-                System.out.println("Player wins");
-                break;
+                return "Player wins";
             case -1 :
-                System.out.println("Computer wins");
+                return "Computer wins";
+            default:
+                return "z";
+            }
         }
     }
-}
+
 
